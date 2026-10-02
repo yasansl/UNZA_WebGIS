@@ -65,6 +65,139 @@ html,body{margin:0;padding:0;width:100%;height:100%;font-family:Arial,sans-serif
 .popup-title{
     font-size:13px;font-weight:bold;margin-bottom:5px
 }
+
+
+/* =========================================================
+   MOBILE UI
+========================================================= */
+
+@media (max-width:768px){
+
+    /* MAP */
+
+    #map{
+        width:100%;
+        height:100vh;
+    }
+
+
+    /* UNZA TITLE */
+
+    .map-title{
+        top:10px;
+        right:10px;
+        max-width:145px;
+        padding:8px 10px;
+        border-radius:7px;
+    }
+
+    .map-title h2{
+        font-size:14px;
+        margin:0 0 3px;
+    }
+
+    .map-title p{
+        font-size:10px;
+    }
+
+
+    /* SEARCH */
+
+    .search-control{
+        top:10px;
+        left:55px;
+        right:165px;
+        width:auto;
+    }
+
+    .search-box{
+        width:100%;
+        border-radius:7px;
+    }
+
+    .search-box input{
+        min-width:0;
+        padding:10px;
+        font-size:14px;
+    }
+
+    .search-box button{
+        padding:0 12px;
+        font-size:13px;
+    }
+
+
+    /* SEARCH RESULTS */
+
+    .search-results{
+        max-height:45vh;
+        border-radius:7px;
+    }
+
+    .search-result{
+        padding:12px;
+        font-size:14px;
+    }
+
+    .search-result strong{
+        font-size:14px;
+    }
+
+    .search-result small{
+        font-size:12px;
+    }
+
+    .search-message{
+        padding:12px;
+        font-size:13px;
+    }
+
+
+    /* LEAFLET MAP CONTROLS */
+
+    .leaflet-control-zoom a{
+        width:38px;
+        height:38px;
+        line-height:38px;
+        font-size:20px;
+    }
+
+    .leaflet-control-layers{
+        font-size:14px;
+    }
+
+    .leaflet-control-layers-toggle{
+        width:38px;
+        height:38px;
+    }
+
+
+    /* POPUPS */
+
+    .leaflet-popup-content-wrapper{
+        max-width:calc(100vw - 40px);
+        border-radius:8px;
+    }
+
+    .leaflet-popup-content{
+        margin:10px 12px;
+        max-width:calc(100vw - 70px);
+        font-size:12px;
+    }
+
+    .feature-table{
+        font-size:10px;
+    }
+
+    .feature-table td{
+        padding:3px 4px;
+    }
+
+    .popup-title{
+        font-size:14px;
+    }
+}
+
 </style>
 </head>
 
@@ -875,6 +1008,7 @@ function escapeHTML(
 
 }
 
+
 /* =========================================================
    14. POPUP
 ========================================================= */
@@ -1012,6 +1146,7 @@ function createPopup(
     return content;
 
 }
+
 
 /* =========================================================
    15. NAVIGATION
