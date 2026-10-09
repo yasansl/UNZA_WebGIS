@@ -154,7 +154,8 @@ const baseMaps={
    3. GEOSERVER
 ========================================================= */
 const geoserverURL =
-'http://2.29.101.60:8080/geoserver/UNZA_campus/wms';
+  'https://operates-tournaments-weblog-previously.trycloudflare.com/geoserver/UNZA_campus/wms';
+    
 /* Main published layer group */
 
 const unzaCampusLayer=L.tileLayer.wms(
@@ -330,10 +331,9 @@ function searchFeatures(query){
 
 
     const layers=[
-        'UNZA_campus:merged unza vectors',
-        'UNZA_campus:buildings_with_rooms_corrected'
-    ];
-
+    'UNZA_campus:merged unza vectors corrected',
+    'UNZA_campus:buildings_with_rooms_corrected'
+];
 
     const searchText=
         query.toLowerCase();
