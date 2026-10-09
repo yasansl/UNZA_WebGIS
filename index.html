@@ -1066,29 +1066,28 @@ function navigateToSelectedBuilding(){
                 currentLon
             );
 
-const routeURL = 'https://wires-detection-erik-tradition.trycloudflare.com/route';
-            console.log(
-                'DESTINATION:',
-                destinationLat,
-                destinationLon
-            );
+           const routeURL =
+    'https://wires-detection-erik-tradition.trycloudflare.com/route';
 
+console.log(
+    'DESTINATION:',
+    destinationLat,
+    destinationLon
+);
+
+const routeRequestURL =
+    routeURL +
     '?start=' +
-    currentLon +
-    ',' +
-    currentLat +
+    encodeURIComponent(currentLon + ',' + currentLat) +
     '&end=' +
-    destinationLon +
-    ',' +
-    destinationLat;
-    
-            console.log(
-                'ROUTE REQUEST:',
-                routeURL
-            );
+    encodeURIComponent(destinationLon + ',' + destinationLat);
 
+console.log(
+    'ROUTE REQUEST:',
+    routeRequestURL
+);
 
-            fetch(routeURL)
+fetch(routeRequestURL) 
 
                 .then(function(response){
 
